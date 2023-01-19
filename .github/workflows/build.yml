@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Cache pip
       uses: actions/cache@v3
       with:
@@ -32,5 +32,4 @@ jobs:
     - name: upload build
       uses: actions/upload-artifact@v3
       with:
-        name: build.bin
         path: .pio/build/STM32F103RE_creality/*.bin
