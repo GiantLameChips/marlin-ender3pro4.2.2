@@ -29,3 +29,8 @@ jobs:
         pip install --upgrade platformio
     - name: Run PlatformIO
       run: pio run
+    - name: upload build
+      uses: actions/upload-artifact@v3
+      with:
+        name: build.bin
+        path: .pio/build/STM32F103RE_creality/*.bin
